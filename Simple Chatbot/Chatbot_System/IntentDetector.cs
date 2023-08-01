@@ -32,7 +32,6 @@ namespace Chatbot_System
             _options.Messages.Add(new ChatMessage(ChatRole.System, _systemPrompt));
 
             // Match intent to tool
-            returnValue = "";
             foreach (Tool tool in ToolBox.tools)
             {
                 if (tool.name != null && intent.Contains(tool.name))
