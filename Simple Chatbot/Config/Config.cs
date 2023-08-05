@@ -23,10 +23,8 @@ namespace Config
     static class IntentDetector
     {
         public static readonly string? defaultSystemPrompt = (
-            "Determine if the intent requires one of the following functions:\n" +
             string.Join("\n", ToolBox.tools.Select(tool => $"- {tool.name} : {tool.desc}")) +
-            "\nYou must respond only with the name value of the intent and nothing else." +
-            "\nIf you detect an intent not listed above, please respond \"unknown_intent\"."
+            "\nYou must respond only with the name value of the intent and nothing else."
         );
     }
 
